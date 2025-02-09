@@ -17,6 +17,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    route::post('/add_booking/{id}',[HomeContoller::class,'add_booking']);
 });
 
 route::get('/home',[AdminController::class,'index'])->name('home');
@@ -28,7 +29,6 @@ route::get('/kamar_update/{id}',[AdminController::class,'kamar_update']);
 route::post('/edit_kamar/{id}',[AdminController::class,'edit_kamar']);
 route::get('/kamar_delete/{id}',[AdminController::class,'kamar_delete']);
 route::get('/room_detail/{id}',[HomeContoller::class,'room_detail']);
-route::post('/add_booking/{id}',[HomeContoller::class,'add_booking']);
 
 Route::get('/booking_kamar', [AdminController::class, 'showBookings']);
 Route::get('/booking_update/{id}', [AdminController::class, 'updateBooking']);
