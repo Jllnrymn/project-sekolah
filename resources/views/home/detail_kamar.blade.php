@@ -73,9 +73,9 @@
                     <div>
                         @if(@session()->has('message'))
                            <div class="alert alert-success">
-                            <button type="button" class="close" data-bs-dismiss='alert'>x</button> 
-                            {{session()->get('message')}} 
-                        </div> 
+                            <button type="button" class="close" data-bs-dismiss='alert'>x</button>
+                            {{session()->get('message')}}
+                        </div>
                         @endif
                     </div>
                     @if($errors)
@@ -94,16 +94,16 @@
                     <div class="form-floating mb-3">
                         <label for="floatingInput">Email</label>
                         <input type="email" name="email" class="form-control" id="floatingInput"
-                            placeholder="name@example.com">
+                            placeholder="name@example.com"  @if(Auth::id())value="{{Auth::user()->email }}"@endif>
                     </div>
                     <div class="form-floating mb-3">
                         <label for="floatingInput">No Telpon</label>
                         <input type="number" name="telpon" class="form-control" id="floatingInput"
-                            placeholder="Masukan No Telp">
+                            placeholder="Masukan No Telp"  @if(Auth::id())value="{{Auth::user()->telpon }}"@endif>
                     </div>
                     <div>
                         <label for="floatingInput">Chek In</label>
-                        <input type="date" name="starDate" class="form-control" id="startDate">
+                        <input type="date" name="starDate" class="form-control" id="startDate" >
                     </div>
                     <div>
                         <label for="floatingInput">Chek Out</label>

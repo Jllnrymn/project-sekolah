@@ -36,6 +36,9 @@ class AdminController extends Controller
     }
 
     public function tambah_kamar(Request $request){
+        $request->validate([
+            'gambar' => 'required|image|mimes:jpg,png,jepg|max:5048',
+        ]);
 
         $data = new Room;
         $data -> nama_kamar = $request->kamar;

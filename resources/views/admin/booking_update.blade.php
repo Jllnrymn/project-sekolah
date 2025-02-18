@@ -87,6 +87,7 @@
                         <div class="mt-3">
                             <button type="submit" name="status" value="approved" class="btn btn-success">Accept</button>
                             <button type="submit" name="status" value="rejected" class="btn btn-danger">Reject</button>
+                            <button type="submit" name="status" value="complite" class="btn btn-warning">complite</button>
                             <a href="{{ url('/booking_kamar') }}" class="btn btn-secondary">Kembali</a>
                         </div>
                     </form>

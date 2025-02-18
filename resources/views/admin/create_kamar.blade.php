@@ -36,9 +36,17 @@
                         <div class="title"><strong>Tambah Kamar</strong></div>
                         <div class="block-body">
                             @if (session('succes'))
-                            <div class="alert alert-succes">
+                            <div class="alert alert-success">
                                 {{session('succes')}}
                             </div>
+                            @endif
+
+                            @if ($errors)
+                                @foreach ($errors->all() as $error)
+                                    <div class="alert alert-danger">
+                                        {{$error}}
+                                    </div>
+                                @endforeach
                             @endif
                             <form action="{{url('tambah_kamar')}}" method="POST" enctype="multipart/form-data"
                                 class="form-horizontal">

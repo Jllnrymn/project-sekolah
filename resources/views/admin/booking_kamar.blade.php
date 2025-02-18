@@ -32,7 +32,8 @@
                             <th>Tanggal Mulai</th>
                             <th>Tanggal Selesai</th>
                             <th>Status</th>
-                            <th>Aksi</th>
+                            <th>update</th>
+                            <th>delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,6 +52,8 @@
                             </td>
                             <td>
                                 <a href="{{ url('booking_update', $booking->id) }}" class="btn btn-outline-warning">Update</a>
+                            </td>
+                            <td>
                                 <a onclick="return confirm('Apakah Anda yakin ingin menghapus booking ini?')" class="btn btn-outline-danger" href="{{ url('booking_delete', $booking->id) }}">Delete</a>
                             </td>
                         </tr>
